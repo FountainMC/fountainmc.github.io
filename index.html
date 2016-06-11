@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fountain</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/dracula.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+    body {
+      background-color: rgb(42, 112, 164);
+    }
+
+    .w3-container {
+      width: 85%;
+      margin: auto;
+    }
+
+    @media (max-width : 1000px) {
+      .w3-container {
+        width: 90%;
+      }
+    }
+    </style>
+  </head>
+
+  <body class="w3-container">
+    <div class="w3-container w3-card-12 w3-red w3-section">
+      <h1>Fountain</h1>
+      <p>A 'simple but beautiful' Minecraft Server Plugin API</p>
+    </div>
+
+    <div class="w3-container w3-card-12 w3-blue-grey w3-section">
+      <h2>A new API that looks familiar</h2>
+      <p>Creating a plugin is as easy as <code>@Plugin</code>.</p>
+      <pre><code>
+        @Plugin(name = "Amazing Test Plugin", id="testPlugin", author="phase")
+        public class TestPlugin {
+
+          @EventHandler
+          public void onEnable(ServerStartEvent event) {
+            System.out.println("Familiar, yet different in the best ways.");
+          }
+
+        }
+      </code></pre>
+    </div>
+
+    <footer class="w3-container w3-card-12 w3-red w3-section">
+      <p><a class="link" href="https://github.com/FountainMC/">github</a></p>
+    </footer>
+    <div class="spacer" style="margin-top: 50px;"></div>
+  </body>
+</html>
