@@ -43,6 +43,11 @@
             System.out.println("Familiar, yet different in the best ways.");
           }
 
+          @EventHandler
+          public void onBlockBreak(BlockBreakEvent event) {
+            event.getPlayer().sendMessage("You broke a " + event.getBlockState().getBlockType().getName());
+          }
+
         }
       </code></pre>
     </div>
