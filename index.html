@@ -3,18 +3,33 @@
   <head>
     <title>Fountain</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/w3.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/dracula.min.css">
+    <link rel="stylesheet" href="css/w3.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/mono-blue.min.css" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,600" type="text/css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
     <style>
     body {
-      background-color: rgb(42, 112, 164);
+      background-color: #FAFAFA;
+      font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+      color: rgb(44, 44, 44);
     }
 
     .w3-container {
-      width: 85%;
+      width: 90%;
       margin: auto;
+    }
+
+    .w3-card-4 {
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 -10px 20px 0 rgba(0,0,0,0.09)!important;
+    }
+
+    .box h1 {
+      color: rgb(73, 147, 197);
+    }
+    
+    .hljs {
+      background: #FAFAFA;
     }
 
     @media (max-width : 1000px) {
@@ -26,33 +41,33 @@
   </head>
 
   <body class="w3-container">
-    <div class="w3-container w3-card-12 w3-red w3-section">
+    <div class="w3-container w3-card-4 box w3-section">
       <h1>Fountain</h1>
       <p>A 'simple but beautiful' Minecraft Server Plugin API</p>
     </div>
 
-    <div class="w3-container w3-card-12 w3-blue-grey w3-section">
+    <div class="w3-container w3-card-4 w3-blue w3-section">
       <h2>A new API that looks familiar</h2>
       <p>Creating a plugin is as easy as <code>@Plugin</code>.</p>
       <pre><code>
         @Plugin(name = "Amazing Test Plugin", id="testPlugin", author="phase")
         public class TestPlugin {
 
-          @EventHandler
-          public void onEnable(ServerStartEvent event) {
-            System.out.println("Familiar, yet different in the best ways.");
-          }
+            @EventHandler
+            public void onEnable(ServerStartEvent event) {
+                System.out.println("Familiar, yet different in the best ways.");
+            }
 
-          @EventHandler
-          public void onBlockBreak(BlockBreakEvent event) {
-            event.getPlayer().sendMessage("You broke a " + event.getBlockState().getBlockType().getName());
-          }
+            @EventHandler
+            public void onBlockBreak(BlockBreakEvent event) {
+                event.getPlayer().sendMessage("You broke a " + event.getBlockState().getBlockType().getName());
+            }
 
         }
       </code></pre>
     </div>
 
-    <footer class="w3-container w3-card-12 w3-red w3-section">
+    <footer class="w3-container w3-card-4 box w3-section">
       <p><a class="link" href="https://github.com/FountainMC/">github</a></p>
     </footer>
     <div class="spacer" style="margin-top: 50px;"></div>
